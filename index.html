@@ -1,52 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>task scheduler</title>
-  <link href="pto.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-  <div id="holder">
-    <div class="header">
-      <h1>Tasks</h1>
-    </div>
-    <div id="placer">
-      <div class="task">
-        <input type="checkbox" id="done">
-        <div class="taskholder">
-          <label id="task-title" for="done">Task</label>
-          <br><label id="task-desc" for="done">Description</label>
-          <br><label id="task-time" for="done">88:88</label>
-          <br><label id="task-date" for="done">31/12/9999</label>
-        </div>
-      </div>
-    </div>
-    <button id="add" type="button">+</button>
-  </div>
-  
-  <div id="taskForm" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeForm()">&times;</span>
-      <label for="taskTitle">Task Title:</label>
-      <input type="text" id="taskTitle" required>
-      <br>
-      <label for="taskDesc">Task Description:</label>
-      <input type="text" id="taskDesc" required>
-      <br>
-      <label for="taskTime">Task Time:</label>
-      <input type="time" id="taskTime" required>
-      <br>
-      <label for="taskDate">Task Date:</label>
-      <input type="date" id="taskDate" required>
-      <br>
-      <label for="taskAssign">Task Assigned to:</label>
-      <input type="email" id="taskAssign" required>
-      <br>
-      <button id="addTaskBtn" onclick="addTask()">Add Task</button>
-    </div>
-  </div>
-
-  <script src="pto.js"></script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root" style="height: 100vh; width: 100vw;"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
