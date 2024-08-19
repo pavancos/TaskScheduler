@@ -5,8 +5,8 @@ const Dialog = ({ setIsAppear, isAppear, register, handleFormSubmit, handleSubmi
         <>
             <div className={`w-full h-full z-50 absolute top-0 flex flex-col justify-center items-center text-white `}>
 
-                <div className='p-7 flex flex-col justify-center items-center rounded-3xl  bg-black opacity-80 '>
-                    <div className='w-full z-10 px-6 flex flex-row justify-between items-center'>
+                <div className='px-1 py-6 flex flex-col justify-center items-center rounded-3xl  bg-black opacity-80 '>
+                    <div className='w-full z-10 px-4 flex flex-row justify-between items-center'>
                         <span className='font-semibold text-xl'>
                             Add a Task
                         </span>
@@ -19,7 +19,7 @@ const Dialog = ({ setIsAppear, isAppear, register, handleFormSubmit, handleSubmi
                     </div>
 
 
-                    <form className='flex flex-col p-6 ' onSubmit={handleSubmit(handleFormSubmit)}>
+                    <form className='flex flex-col p-4 ' onSubmit={handleSubmit(handleFormSubmit)}>
                         <div className='flex justify-between'>
                             <label htmlFor="Name">Task Name: </label>
                             <input className='rounded-lg text-black px-2 ml-2' type="text" id='Name' {...register('Name')} />
@@ -28,7 +28,7 @@ const Dialog = ({ setIsAppear, isAppear, register, handleFormSubmit, handleSubmi
                             <label htmlFor="Description">Task Description: </label>
                             <input className='rounded-lg text-black px-2 ml-2' type="text" id='Description' {...register('description')} />
                         </div>
-                        <button className={`bg-zinc-600 mt-7 rounded-lg`} type="submit">Submit</button>
+                        <button className={`bg-zinc-600 mt-7 rounded-lg p-1 flex flex-row justify-center items-center`} type="submit">Submit</button>
                     </form>
 
                 </div>
