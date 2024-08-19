@@ -12,7 +12,7 @@ export default function App() {
   return (
     <div className={`w-full  h-full bg-stone-800`}>
         <NavBar tasks={tasks}></NavBar>
-        <Tasks tasks={tasks} ></Tasks>
+        <Tasks tasks={tasks} setTasks={setTasks} ></Tasks>
         <AddButton tasks={tasks} setTasks={setTasks}></AddButton>
     </div>
   )

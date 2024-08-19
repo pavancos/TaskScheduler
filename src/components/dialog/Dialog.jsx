@@ -10,10 +10,10 @@ const Dialog = ({ setIsAppear, isAppear, register, handleFormSubmit, handleSubmi
                         <span className='font-semibold text-xl'>
                             Add a Task
                         </span>
-                        <button className='flex'
-                            onClick={() => setIsAppear(false)}
-                        >
-                            <svg width="40" height="40" viewbox="0 0 40 40"><path d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="white" stroke-width="4" /></svg>
+                        <button className='flex' onClick={() => setIsAppear(false)}>
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <path d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="white" strokeWidth="4" />
+                            </svg>
                         </button>
 
                     </div>
@@ -25,8 +25,8 @@ const Dialog = ({ setIsAppear, isAppear, register, handleFormSubmit, handleSubmi
                             <input className='rounded-lg text-black px-2 ml-2' type="text" id='Name' {...register('Name')} />
                         </div>
                         <div className='flex justify-between mt-5'>
-                            <label htmlFor="Name">Task Description: </label>
-                            <input className='rounded-lg text-black px-2 ml-2' type="text" id {...register('description')} />
+                            <label htmlFor="Description">Task Description: </label>
+                            <input className='rounded-lg text-black px-2 ml-2' type="text" id='Description' {...register('description')} />
                         </div>
                         <button className={`bg-zinc-600 mt-7 rounded-lg`} type="submit">Submit</button>
                     </form>

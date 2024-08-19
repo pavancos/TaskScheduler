@@ -1,28 +1,26 @@
-import React from 'react'
+import React from 'react';
+import { useState } from 'react';
 
-const Task = ({task}) => {
+const Task = ({ task, tasks, setTasks }) => {
+  const handleRemoveTask = () => {
+    // console.log('Removing task with id:', task.id);
+    setTasks(tasks.filter((t) => t.id !== task.id));
+  };
+
   return (
-    <>
-        <div className={`p-2 py-2 flex flex-row rounded-lg bg-stone-700 my-3 hover:bg-neutral-900`}>
-            <div className='flex justify-center items-center'>
-                <button
-                 className={`
-                    rounded-full h-3 w-3 bg-yellow-200
-                    hover:bg-yellow-600 hover:ring-2 hover:ring-white focus:ring-slate-300
-                    `}
-                >
-                </button>
-            </div>
-            <div className={`inline ml-2 `}>
-                <h3 className={`text-neutral-200 text-xl font-semibold`}>{task.Name}</h3>
-                <p className={`text-neutral-300`}>{task.description}</p>
+    <div className="p-2 py-2 flex flex-row rounded-lg bg-stone-700 my-3 hover:bg-neutral-900">
+      <div className="flex justify-center items-center">
+        <button
+          onClick={handleRemoveTask}
+          className="rounded-full h-3 w-3 bg-yellow-200 hover:bg-yellow-600 hover:ring-2 hover:ring-white focus:ring-slate-300"
+        ></button>
+      </div>
+      <div className="inline ml-2">
+        <h3 className="text-neutral-200 text-xl font-semibold">{task.Name}</h3>
+        <p className="text-neutral-300">{task.description}</p>
+      </div>
+    </div>
+  );
+};
 
-            </div>
-            
-
-        </div>
-    </>
-  )
-}
-
-export default Task
+export default Task;
